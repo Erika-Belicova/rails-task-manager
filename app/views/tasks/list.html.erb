@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+  </head>
+  <body>
+    <h1>My tasks</h1>
+
+    <% @tasks.each do |task| %>
+      <div>
+        <%= link_to task.title, task_path(task) %>
+      </div>
+    <% end %>
+
+    <%= link_to "Add task", new_path %>
+  </body>
+</html>
